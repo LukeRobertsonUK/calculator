@@ -1,4 +1,3 @@
-# Function definitions first
 def menu
   puts `clear`
   puts "***CalcIt***"
