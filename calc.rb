@@ -9,38 +9,14 @@ end
 
 def hold
   puts "press any key to continue"
-  stop = gets.chomp
+  gets
 end
 
-
-def  power
-  x = num_1
-  puts "... and raise it to the power:"
-  y = num_2
-  result = x**y
-  puts "#{x} to the power of #{y} equals #{result}"
-  hold
-end
-
-def sqrt(x)
-  result = x**(0.5)
-  puts "The square-root of #{x} is #{result}"
-  hold
-end
-
-
-def num_1
+def get_num
   # ask the user for first number
-  print "First number:"
+  print "input:"
   gets.chomp.to_f
 end
-
-def num_2
-  # ask the user for second number
-  print "Second number:"
-  gets.chomp.to_f
-end
-
 
 def basic_calc
  # ask the user which operation they want to perform
@@ -48,62 +24,63 @@ def basic_calc
  operation = gets.chomp.downcase
  case operation
  when 'a'
-   add(num_1, num_2)
+   add(get_num, get_num)
  when 's'
-   sub(num_1, num_2)
+   sub(get_num, get_num)
  when 'm'
-   mul(num_1, num_2)
+   mul(get_num, get_num)
  when 'd'
-   div(num_1, num_2)
+   div(get_num, get_num)
  else
  basic_calc
 end
 end
 
-#perform addition
+#basic method
 def add(x, y)
- result = x + y
- puts "#{result}"
+ puts "#{x + y}"
  hold
 end
 
-#perform subtraction
 def sub(x, y)
- result = x - y
- puts "#{result}"
+ puts "#{x -y}"
  hold
 end
 
-#perform multiplication
 def mul(x, y)
- result = x * y
- puts "#{result}"
+ puts "#{x - y}"
  hold
 end
 
-#perform division
 def div(x, y)
- result = x / y
- puts "#{result}"
+ puts "#{x / y}"
  hold
 end
 
 
-
+#advanced methods
 def advanced_calc
 print"(p)ower, (s)quare-root:"
 operation = gets.chomp.downcase
 case operation
 when 'p'
-  power
+  power(get_num, get_num)
 when 's'
-  sqrt(num_1)
+  sqrt(get_num)
 else
   advanced_calc
 end
 end
 
+def  power(x, y)
+  puts "#{x} to the power of #{y} equals #{x**y}"
+  hold
+end
 
+def sqrt(x)
+  puts "The square-root of #{x} is #{x**(0.5)}"
+  hold
+end
 
 # run the app...
 
