@@ -11,9 +11,15 @@ def  power
   num_1
   puts "... and raise it to the power:"
   num_2
-  puts numinput1**numinput2
+  result = numinput1**numinput2
+  puts "#{numinput1} to the power of #{numinput2} equals #{result}"
 end
 
+def sqrt
+  num_1
+  result = numinput1**(1/2)
+  puts "The square-root of #{numinput1} is #{result}"
+end
 
 
 
@@ -21,7 +27,6 @@ def basic_calc
   # ask the user which operation they want to perform
   print "(a)dd, (s)ubtract, (m)ultiply, (d)ivide: "
   operation = gets.chomp.downcase
-
 end
 
 def advanced_calc
@@ -35,7 +40,7 @@ when 's'
 else
   puts "That is not a valid option"
 end
-
+end
 
 
 
