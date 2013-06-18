@@ -7,11 +7,6 @@ def menu
   gets.chomp.downcase
 end
 
-def hold
-  puts "press any key to continue"
-  gets
-end
-
 def get_num
   # ask the user for first number
   print "input:"
@@ -39,22 +34,18 @@ end
 #basic method
 def add(x, y)
  puts "#{x + y}"
- hold
 end
 
 def sub(x, y)
  puts "#{x -y}"
- hold
 end
 
 def mul(x, y)
  puts "#{x - y}"
- hold
 end
 
 def div(x, y)
  puts "#{x / y}"
- hold
 end
 
 
@@ -74,12 +65,10 @@ end
 
 def  power(x, y)
   puts "#{x} to the power of #{y} equals #{x**y}"
-  hold
 end
 
 def sqrt(x)
   puts "The square-root of #{x} is #{x**(0.5)}"
-  hold
 end
 
 # run the app...
@@ -93,6 +82,7 @@ while response != 'q'
   when 'a'
     advanced_calc
   end
-
+  puts "press any key to continue"
+  gets
   response = menu
 end
