@@ -1,3 +1,6 @@
+require 'pry'
+require 'pry-debuger'
+
 def menu
   puts `clear`
   puts "***CalcIt***"
