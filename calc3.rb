@@ -1,5 +1,5 @@
 require 'pry'
-require 'pry-debuger'
+require 'pry-debugger'
 
 def menu
   puts `clear`
